@@ -8,9 +8,12 @@
 	<link rel="stylesheet" href="css/change-color.css">	
 </head>
 <body>
+	<script>
+		var name = prompt("이름을 입력하세요.");
+		document.write("<b><big>" + name + "</big></b>님, 환영합니다.");
+	</script>
 	<h1 id="heading">자바스크립트</h1>
 	<p id="text">위 텍스트를 클릭해 보세요</p>
-
 	<script>
 		var heading = document.querySelector('#heading');
 		heading.onclick = function() {
