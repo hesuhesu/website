@@ -1,129 +1,21 @@
-<!doctype html>
-<html>
-<!--alt + b-->
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-    <meta charset="utf-8">
-    <title>hesuhesu 일기</title>
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
-    <style>
-        @import url(https://fonts.googleapis.com/css?family=Roboto:400,700,500);
-
-        /* main Styles */
-
-        html { box-sizing: border-box; }
-
-        *, *:before, *:after { box-sizing: inherit; }
-
-        body {
-            background: #fafafa;
-            font-family: "Roboto", sans-serif;
-            font-size: 14px;
-            margin: 0;
-        }
-
-        a { text-decoration: none; }
-
-        .container {
-            width: 500px;
-            margin: auto;
-        }
-
-        h1 { text-align:center; margin-top:150px;}
-
-        h2 {text-align:center; margin-top:30px;}
-
-        /* Navigation Styles */
-
-        nav { background: #2ba0db; }
-
-        nav ul {
-            font-size: 0;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline-block;
-            position: relative;
-        }
-
-        nav ul li a {
-            color: #fff;
-            display: block;
-            font-size: 14px;
-            padding: 15px 14px;
-            transition: 0.3s linear;
-        }
-
-        nav ul li:hover { background: #126d9b; }
-
-        nav ul li ul {
-            border-bottom: 5px solid #2ba0db;
-            display: none;
-            position: absolute;
-            width: 250px;
-        }
-
-        nav ul li ul li {
-            border-top: 1px solid #444;
-            display: block;
-        }
-
-        nav ul li ul li:first-child { border-top: none; }
-
-        nav ul li ul li a {
-            background: #373737;
-            display: block;
-            padding: 10px 14px;
-        }
-
-        nav ul li ul li a:hover { background: #126d9b; }
-
-        nav .fa.fa-angle-down { margin-left: 6px; }
-    </style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>글자색 바꾸기</title>
+	<link rel="stylesheet" href="css/change-color.css">	
 </head>
-
 <body>
-<nav>
-    <div class="container">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="html/introduce.html">Introduce</a></li>
-            <li> <a href="#">Game<i class='fa fa-angle-down'></i></a>
-                <ul>
-                    <li><a href="#">지뢰찾기</a></li>
-                    <li><a href="#">스도쿠</a></li>
-                </ul>
-            </li>
-            <li class='sub-menu'> <a href="#">Services<i class='fa fa-angle-down'></i></a>
-                <ul>
-                    <li><a href="#">Service One</a></li>
-                    <li><a href="#">Service Two</a></li>
-                    <li><a href="#">Service Three</a></li>
-                    <li><a href="#">Service Four</a></li>
-                    <li><a href="#">Service Five</a></li>
-                    <li><a href="#">Service Six</a></li>
-                </ul>
-            </li>
-            <li><a href="https://github.com/hesuhesu" target="_blank" rel="noopener noreferrer">develop Github</a></li>
-        </ul>
-    </div>
-</nav>
+	<h1 id="heading">자바스크립트</h1>
+	<p id="text">위 텍스트를 클릭해 보세요</p>
 
-<h2>수정 중</h2>
-
-<script src="http://code.jquery.com/jquery-1.12.4.min.js?ver=1"></script>
-<script>
-    $('nav li').hover(
-        function() {
-            $('ul', this).stop().slideDown(300);
-        },
-        function() {
-            $('ul', this).stop().slideUp(300);
-        }
-    );
-</script>
-
-
+	<script>
+		var heading = document.querySelector('#heading');
+		heading.onclick = function() {
+			heading.style.color = "red";
+		}
+	</script>
 </body>
 </html>
