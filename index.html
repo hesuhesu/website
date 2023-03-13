@@ -9,9 +9,23 @@
 </head>
 <body>
 	<script src = "js/open.js"></script>
+	<p>
+		<h2>현재 시간은</h2>
+		<h1 id="clock"></h1>
+	</p>
 	<h1 id="heading">자바스크립트</h1>
 	<p id="text">위 텍스트를 클릭해 보세요</p>
-    <h1 id="clock"></h1>
+    
+	첫번째 수 : <input type = "text" id = "first"><p></p>
+    두번째 수 : <input type = "text" id = "second"><p></p>
+            <button onclick="add()">+</button>
+            <button onclick="sub()">-</button>
+            <button onclick="mul()">*</button>
+            <button onclick="div()">/</button>
+            <button onclick="remain()">%</button>
+            <p></p><strong><div id="showResult"></div></strong>	
+	
+    <script src = 'js/calculator.js'></script>
 	<script src = 'js/clock.js'></script>
     <script>
 		var heading = document.querySelector('#heading');
