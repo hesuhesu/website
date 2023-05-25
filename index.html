@@ -1,37 +1,64 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html>
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>hesuhesu</title>
-	<link rel="stylesheet" href="css/change-color.css">	
+<meta charset="utf-8" />
+<title>hesuhesu</title>
+<link rel="stylesheet" href="css/change-color.css">	
+<style>
+  
+</style>
 </head>
+
 <body>
 	<script src = "js/open.js"></script>
 	<p>
 		<h2>현재 시간은</h2>
 		<h1 id="clock"></h1>
 	</p>
-	<h1 id="heading">자바스크립트</h1>
-	<p id="text">위 텍스트를 클릭해 보세요</p>
-    
-	첫번째 수 : <input type = "text" id = "first"><p></p>
-    두번째 수 : <input type = "text" id = "second"><p></p>
-            <button onclick="add()">+</button>
-            <button onclick="sub()">-</button>
-            <button onclick="mul()">*</button>
-            <button onclick="div()">/</button>
-            <button onclick="remain()">%</button>
-            <p></p><strong><div id="showResult"></div></strong>	
-	
-    <script src = 'js/calculator.js'></script>
-	<script src = 'js/clock.js'></script>
-    <script>
-		var heading = document.querySelector('#heading');
-		heading.onclick = function() {
-			heading.style.color = "red";
-		}
-	</script>
+
+	<div id="screen" class="waiting">클릭해서 시작하세요</div>
+	<div id="result"></div>
+
 </body>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+  const screen = document.querySelector("#screen");
+  const result = document.querySelector("#result");
+
+  let startTime; // 시작시간
+  let endTime; // 끝나는 시간
+  let responseTime; // 측정시간
+  let records = []; // 평균 반응 속도 구할 빈 배열
+  let timeoutId; // setTimeout 함수를 담을 변수
+
+  screen.addEventListener("click", () => {
+    if (screen.classList.contains("waiting")) {
+      screen.classList.replace("waiting", "ready");
+      screen.textContent = "초록색이 되면 클릭하세요";
+      timeoutId = setTimeout(() => {
+        startTime = new Date();
+        screen.classList.replace("ready", "now");
+        screen.textContent = "클릭 하세요!";
+      }, Math.floor(Math.random() * 1000) + 2000);
+    } else if (screen.classList.contains("ready")) {
+      clearTimeout(timeoutId);
+      screen.textContent = '너무 성급합니다!';
+      screen.classList.replace('ready', 'waiting')
+    } else if (screen.classList.contains("now")) {
+      endTime = new Date();
+      responseTime = endTime - startTime; // 측정시간
+      records.push(responseTime);
+      let Avg = records.reduce((acc, cur) => {return acc+cur}, 0) / records.length; // 평균 반응 속도
+      result.textContent = '현재 : ' + responseTime + " ms" + ' ' + '평균 속도 : ' + Avg;
+    //   startTime = null;
+    //   endTime = null; 여기서 null 이거 없어도 되지 않나?
+      screen.classList.replace("now", "waiting");
+      screen.textContent = "클릭해서 시작하세요";
+    }
+  });
+});
+</script>
+<script src = 'js/clock.js'></script>
+
 </html>
