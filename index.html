@@ -6,6 +6,11 @@
 <link rel="stylesheet" href="css/change-color.css">	
 </head>
 <body>
+  <div style = "background-color: aqua; border: 3px solid; text-align: right; float:right">
+    <span><strong>&nbsp;&nbsp;현재시간 : </strong></span>
+    <span id = "clock"><strong></strong></span><span>&nbsp;&nbsp;</span>
+  </div>  
+  
     <h1 id = "loglog">로그인</h1>
     <form id="loginForm">
         <label for="username">아이디:</label>
@@ -104,7 +109,7 @@
             <input type="button" value="로그아웃" onclick="logout()">
         </div>
     </div>
-    
+    <script src = "js/clock.js"></script>
     <script src = "js/sugan.js"></script>
 </body>
 </html>
