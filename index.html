@@ -1,64 +1,110 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8" />
-<title>hesuhesu</title>
+<meta charset="UTF-8">
+<title>수강신청</title>
 <link rel="stylesheet" href="css/change-color.css">	
-<style>
-  
-</style>
 </head>
-
 <body>
-	<script src = "js/open.js"></script>
-	<p>
-		<h2>현재 시간은</h2>
-		<h1 id="clock"></h1>
-	</p>
+    <h1 id = "loglog">로그인</h1>
+    <form id="loginForm">
+        <label for="username">아이디:</label>
+        <input type="text" id="username" name="username" required><br>
+        
+        <label for="password">비밀번호:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        <div class="form-buttons">
+            <input type="button" value="로그인" onclick="login()">
+            <input type="button" value="회원가입" onclick="create_id()">
+        </div>
+       </form>
+    
+    <div id="adminSection"><!-- 관리자 영역 내용 -->
+        <h2 style = "text-align: center;">관리자 영역</h2>
+        <h3>[강의 추가 메뉴얼]</h3>
+        <div class = "explain">
+            <ul>
+                <li>강의명은 <strong style = "color: red;">특수문자</strong>를 제외하면 어떤 이름이든 가능합니다.</li>
+                <li>강의번호는 영어 대문자 3자리 + "-" + 숫자 3자리 입니다.</li>
+            </ul>
+        </div><br><br>
+        <div id = "nb1" style="background-color : #CCC; border: 2px solid black;">
+            <h3>[회원정보]</h3>
+            <div id = "member_list"></div> <!--고객 정보-->
+        </div><br><br>
+        
+        <form id = "member_sugan_list"><!--고객 수강 정보-->
+            <h3>[회원 수강내역 검색]</h3>
+            <label>아이디</label>
+            <input type="text" id="search_id" name="search_id" required>
+            <input type="button" value="보여주기" onclick="search_inf()">
+        </form><br><br>
+        <div id = "nb2" style="background-color : #CCC; border: 2px solid black;">
+            <h3>[회원 수강 내역]</h3>
+            <div id = "member_sugans" ></div>
+        </div><br><br>
 
-	<div id="screen" class="waiting">클릭해서 시작하세요</div>
-	<div id="result"></div>
+        <div id = "nb3">
+            <h3>[회원 삭제]</h3>
+            <form id = "member_delete"><!--고객 수강 정보-->
+                <label>아이디</label>
+                <input type="text" id="del_username" name="del_username" required>
+                <input type="button" value="삭제하기" onclick="delete_id()">
+            </form>
+        </div><br><br>
+        
+        
+        <div id = "add_sugang"> <!--강의 추가-->
+            <h3>[강의 추가]</h3>
+            <label>강의명</label>
+            <input type="text" id="Gname" name="Gname" required>
+            <label>강의번호</label>
+            <input type="text" id="Gnum" name="Gnum" required>
+            <input type="button" value="강의추가" onclick="add_gangE()">
+        </div><br><br>
 
+        <div id = "nb4" style="background-color : #CCC; border: 2px solid black;">
+            <h3>[강의정보]</h3>
+            <div id = "gangE_list"></div> <!--강의 정보-->
+        </div>
+        <div id="adminLogoutButton" class="logoutButton">
+            <input type="button" value="로그아웃" onclick="logout()">
+        </div><br><br>
+    </div>
+    
+    <div id="userSection"><!-- 사용자 영역 내용 -->
+        <h2 style = "text-align: center;">사용자 영역</h2>
+        
+        <div id = "nb5" style="background-color : #CCC; border: 2px solid black;">
+            <h3>[개설된 강의 목록]</h3>
+            <div id="user_willbe_list"></div>
+        </div><br><br>
+        
+        <h3>강의 신청</h3>
+        <form>
+            <label>강의명</label>
+            <input type="text" id="Gname2" name="Gname2" required>
+            <label>강의번호</label>
+            <input type="text" id="Gnum2" name="Gnum2" required>
+            <input type="button" value="강의담기" onclick="add_gangE2()">
+        </form><br><br>
+        
+        <div id = "nb6" style="background-color : #CCC; border: 2px solid black;">
+            <h3>[신청한 강의 목록]</h3>
+            <div id="user_doing_list"></div>
+        </div><br><br>
+        
+        <h3>[신청 강의 삭제]</h3>
+        <form>
+            <label>강의명</label>
+            <input type="text" id="Gname3" name="Gname3" required>
+            <input type="button" value="강의빼기" onclick="delete_gangE()">
+        </form><br><br>
+        <div id="userLogoutButton" class="logoutButton">
+            <input type="button" value="로그아웃" onclick="logout()">
+        </div>
+    </div>
+    
+    <script src = "js/sugan.js"></script>
 </body>
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-  const screen = document.querySelector("#screen");
-  const result = document.querySelector("#result");
-
-  let startTime; // 시작시간
-  let endTime; // 끝나는 시간
-  let responseTime; // 측정시간
-  let records = []; // 평균 반응 속도 구할 빈 배열
-  let timeoutId; // setTimeout 함수를 담을 변수
-
-  screen.addEventListener("click", () => {
-    if (screen.classList.contains("waiting")) {
-      screen.classList.replace("waiting", "ready");
-      screen.textContent = "초록색이 되면 클릭하세요";
-      timeoutId = setTimeout(() => {
-        startTime = new Date();
-        screen.classList.replace("ready", "now");
-        screen.textContent = "클릭 하세요!";
-      }, Math.floor(Math.random() * 1000) + 2000);
-    } else if (screen.classList.contains("ready")) {
-      clearTimeout(timeoutId);
-      screen.textContent = '너무 성급합니다!';
-      screen.classList.replace('ready', 'waiting')
-    } else if (screen.classList.contains("now")) {
-      endTime = new Date();
-      responseTime = endTime - startTime; // 측정시간
-      records.push(responseTime);
-      let Avg = records.reduce((acc, cur) => {return acc+cur}, 0) / records.length; // 평균 반응 속도
-      result.textContent = '현재 : ' + responseTime + " ms" + ' ' + '평균 속도 : ' + Avg;
-    //   startTime = null;
-    //   endTime = null; 여기서 null 이거 없어도 되지 않나?
-      screen.classList.replace("now", "waiting");
-      screen.textContent = "클릭해서 시작하세요";
-    }
-  });
-});
-</script>
-<script src = 'js/clock.js'></script>
-
 </html>
