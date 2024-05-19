@@ -1,0 +1,28 @@
+.whitenote {
+  height:100%;
+  width:50px;
+  float:left;
+  position:relative;
+  background:white;
+  overflow:visible;
+  border-right:1px solid black;
+  box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+
+.blacknote {
+  position:absolute;
+  height:65%;
+  width:70%;
+  left:60%;
+  top:0;
+  z-index:1;
+  background:#777;
+}
+
+#container2 {
+  position: relative;
+  margin: 0 auto; /* 수정된 부분: 좌우 여백을 자동으로 설정하여 가운데 정렬 */
+  border:5px solid black;
+  width:1810px; /* Adjusted for 16 keys (14+2) */
+  height:300px; /* Adjusted height for proper white key height */
+}
