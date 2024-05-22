@@ -19,7 +19,7 @@
   background:#777;
 }
 
-#container2 {
+#container {
   position: relative;
   margin: 0 auto; /* 수정된 부분: 좌우 여백을 자동으로 설정하여 가운데 정렬 */
   border:5px solid black;

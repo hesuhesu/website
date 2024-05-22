@@ -20,7 +20,7 @@ for (var octave = 0; octave < 5; octave++) { // 옥타브 범위를 6단계로 �
 // Adding the final C note
 html += `<div class='whitenote' onmousedown='noteDown(this, false)' onmouseup='noteUp(this,false)' onmouseleave='noteUp(this,false)' data-note='C7'></div>`; // 옥타브 값을 7단계로 수정
 
-document.getElementById('container2').innerHTML = html;
+document.getElementById('container').innerHTML = html;
 
 function noteUp(elem, isSharp) {
     elem.style.background = isSharp ? '#777' : 'white';
