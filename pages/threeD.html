@@ -1,14 +1,33 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>3D Upload</title>
-		<style>
-			body { margin: 0; }
-			canvas { display: block; }
-		</style>
-	</head>
-	<body>
-		<script type ="module" src="../assets/js/threejs.js"></script>
-	</body>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Upload</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mui/1.0.0/css/mui.min.css">
+    <style>
+        body { margin: 0; }
+        canvas { display: block; }
+        .input-container {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 10;
+        }
+		button {
+			height: 38px;
+		}
+		button:hover {
+            background-color: #ff4081; /* 마우스 오버 시 배경색 변경 */
+            color: white; /* 글자색 변경 (필요시) */
+        }
+    </style>
+</head>
+<body>
+    <div class="input-container">
+        <input type="file" id="inputElement" accept=".gltf,.glb" class="mui-btn mui-btn--primary" />
+        <a href="../index.html"><button>홈으로 가기</button></a>
+    </div>
+    <script type="module" src="../assets/js/threejs.js"></script>
+</body>
 </html>
