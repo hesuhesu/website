@@ -14,9 +14,17 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tone/15.0.4/Tone.js"></script>
 		<script src="assets/js/piano.js" defer></script>
+		<style>
+			#MainThreeD {
+				width: 100%; /* 또는 원하는 고정 크기 */
+				height: 100%; /* 또는 원하는 고정 크기 */
+				position: absolute;
+				border: 1px solid #eeeeee; /* 경계선 추가 */
+			}
+		</style>
 	</head>
 	<body class="is-preload">
-
+		
 		<!-- Wrapper -->
 			<div id="wrapper" class="divided">
 				<!-- One -->
@@ -26,6 +34,8 @@
 							<p class="major">Template Design By : <a href="https://html5up.net" target = "blank">HTML5 UP</a>
 								<br>Portfolio Owner : <a href="https://github.com/hesuhesu" target = "blank">Github</a>
 							</p>
+							<p class="major"># 근면성실 개발자 <br># 책임감 있는 지원자</p>
+							<p class="major">이름 : 은 희 수</p>
 							<ul class="actions stacked">
 								<li><a href="#first" class="button big wide smooth-scroll-middle">First Project</a></li>
 							</ul>
@@ -39,7 +49,7 @@
 					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
 						<div class="content">
 							<h2>Community(Spring Boot)</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.</p>
+							<p>spring boot 를 사용한 community toy project 입니다.<br>"점프 투 스프링부트 3" 서적을 바탕으로 제작하였습니다.<br><br><strong>프로젝트 기간 : 24.01.17 ~ 24.02.02</strong></p>
 							<ul class="actions stacked">
 								<li>
 									<a href="#second" class="button big wide smooth-scroll-middle">Second Project</a>
@@ -56,7 +66,7 @@
 					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in" id = "second">
 						<div class="content">
 							<h2>Dong-A WYSIWYG Editor</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.</p>
+							<p>학부생 졸업 프로젝트 Dong-A WYSIWYG Editor 입니다.<br>GLTF/GLB File Upload & WebGL Editor 로 제작하는 기능을 ThreeJS 와 WYSIWYG Editor(Quill Editor) 와 결합하여 구현하였습니다. <br>아래에 3D SITE 에서 ThreeJS 기능을 간단히 체험할 수 있습니다.<br><br><strong>프로젝트 기간 : 24.03.02 ~ 진행 중</strong></p>
 							<ul class="actions stacked">
 								<li>
 									<a href="#third" class="button big wide smooth-scroll-middle">Third Project</a>
@@ -65,8 +75,8 @@
 								</li>
 							</ul>
 						</div>
-						<div class="image">
-							<img src="images/spotlight02.jpg" alt="" />
+						<div class="image"> <!-- 수정 예정 -->
+							<canvas id = "MainThreeD"></canvas>
 						</div>
 					</section>
 
@@ -195,42 +205,6 @@
 									</a>
 									<div class="caption">
 										<h3>Tempus Dolor</h3>
-										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-										<ul class="actions fixed">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-								<article>
-									<a href="images/gallery/fulls/10.jpg" class="image">
-										<img src="images/gallery/thumbs/10.jpg" alt="" />
-									</a>
-									<div class="caption">
-										<h3>Sed Etiam</h3>
-										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-										<ul class="actions fixed">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-								<article>
-									<a href="images/gallery/fulls/11.jpg" class="image">
-										<img src="images/gallery/thumbs/11.jpg" alt="" />
-									</a>
-									<div class="caption">
-										<h3>Magna Lorem</h3>
-										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-										<ul class="actions fixed">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-								<article>
-									<a href="images/gallery/fulls/12.jpg" class="image">
-										<img src="images/gallery/thumbs/12.jpg" alt="" />
-									</a>
-									<div class="caption">
-										<h3>Ipsum Dolor</h3>
 										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
 										<ul class="actions fixed">
 											<li><span class="button small">Details</span></li>
@@ -368,6 +342,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script src="assets/js/threejs.js"></script>
+			<script type="module" src="assets/js/MainThreeJS.js"></script>
 	</body>
 </html>

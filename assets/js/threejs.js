@@ -16,7 +16,7 @@ renderer.setClearColor(0x003300, 1);
 document.body.appendChild(renderer.domElement);
 
 const controls = new OrbitControls(camera, renderer.domElement);
-controls.minDistance = 1;
+controls.minDistance = 0.1;
 controls.maxDistance = 500;
 
 const ambientLight = new THREE.AmbientLight(0xffffff, 1);
