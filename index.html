@@ -21,6 +21,70 @@
 				position: absolute;
 				border: 1px solid #eeeeee; /* 경계선 추가 */
 			}
+			h1 {
+				font-size: 5rem;
+				font-weight: 900;
+				color: #fff;
+				text-shadow: 0 1px 0 #000, 
+					0 2px 0 #000,
+					0 3px 0 #000, 
+					0 4px 0 #000, 
+					0 5px 0 #000,
+					0 6px 1px rgba(0,0,0,.5), 
+					0 0 5px rgba(0,0,0,.5),
+					0 1px 3px rgba(0,0,0,.5), 
+					0 3px 5px rgba(0,0,0,.4), 
+					0 5px 10px rgba(0,0,0,.3), 
+					0 10px 10px rgba(0,0,0,.2),
+					0 20px 20px rgba(0,0,0,.15);
+			}
+			h2 {
+				font-size: 3em;
+				font-weight: 900;
+				color: #fff;
+				text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9,
+				0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa,
+				0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1),
+				0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 
+				0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2),
+					0 20px 20px rgba(0,0,0,.15);
+			}
+
+			h2:hover {
+				animation: blink 2s infinite;
+			}
+			@keyframes blink {
+			0%, 100% {
+				text-shadow: 
+					0 1px 0 #ccc, 
+					0 2px 0 #c9c9c9,
+					0 3px 0 #bbb, 
+					0 4px 0 #b9b9b9, 
+					0 5px 0 #aaa,
+					0 6px 1px rgba(0,0,0,.1), 
+					0 0 5px rgba(0,0,0,.1),
+					0 1px 3px rgba(0,0,0,.3), 
+					0 3px 5px rgba(0,0,0,.2), 
+					0 5px 10px rgba(0,0,0,.25), 
+					0 10px 10px rgba(0,0,0,.2),
+					0 20px 20px rgba(0,0,0,.15);
+			}
+			50% {
+				text-shadow: 
+					0 1px 0 #000, 
+					0 2px 0 #000,
+					0 3px 0 #000, 
+					0 4px 0 #000, 
+					0 5px 0 #000,
+					0 6px 1px rgba(0,0,0,.5), 
+					0 0 5px rgba(0,0,0,.5),
+					0 1px 3px rgba(0,0,0,.5), 
+					0 3px 5px rgba(0,0,0,.4), 
+					0 5px 10px rgba(0,0,0,.3), 
+					0 10px 10px rgba(0,0,0,.2),
+					0 20px 20px rgba(0,0,0,.15);
+			}
+		}
 		</style>
 	</head>
 	<body class="is-preload">
@@ -31,11 +95,11 @@
 					<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
 						<div class="content">
 							<h1>Introduce</h1>
+							<p class="major">이 름 : 은 희 수</p>
+							<p class="major"># 풀스택 개발자 <br># 성실한 개발자</p>
 							<p class="major">Template Design By : <a href="https://html5up.net" target = "blank">HTML5 UP</a>
 								<br>Portfolio Owner : <a href="https://github.com/hesuhesu" target = "blank">Github</a>
 							</p>
-							<p class="major"># 근면성실 개발자 <br># 책임감 있는 지원자</p>
-							<p class="major">이름 : 은 희 수</p>
 							<ul class="actions stacked">
 								<li><a href="#first" class="button big wide smooth-scroll-middle">First Project</a></li>
 							</ul>
@@ -75,7 +139,7 @@
 								</li>
 							</ul>
 						</div>
-						<div class="image"> <!-- 수정 예정 -->
+						<div class="image">
 							<canvas id = "MainThreeD"></canvas>
 						</div>
 					</section>
@@ -86,7 +150,7 @@
 							<h2>Project - 3</h2>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.</p>
 							<ul class="actions stacked">
-								<li><a href="#forth" class="button big wide smooth-scroll-middle">Go Next Level</a></li>
+								<li><a href="#forth" class="button big wide smooth-scroll-middle">Gallery</a></li>
 							</ul>
 						</div>
 						<div class="image">
@@ -97,8 +161,8 @@
 				<!-- Five -->
 					<section class="wrapper style1 align-center" id = "forth">
 						<div class="inner">
-							<h2>Massa sed condimentum</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum.</p>
+							<h2>활동 사진</h2>
+							<p>진행했던 프로젝트와 경험들을 사진과 부연 설명으로 담아봤습니다.</p>
 						</div>
 
 						<!-- Gallery -->
@@ -218,99 +282,56 @@
 				<!-- Six -->
 					<section class="wrapper style1 align-center">
 						<div class="inner">
-							<h2>Ipsum sed consequat</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum.</p>
+							<h2>지원자가 생각하는 개발이란?</h2>
 							<div class="items style1 medium onscroll-fade-in">
 								<section>
 									<span class="icon style2 major fa-gem"></span>
-									<h3>Lorem</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+									<h3>코더에서 엔지니어로</h3>
+									<p>직면한 문제에 돌려막기식으로 떼우는 개발자는 "코더"입니다. 유지보수가 용이하며 근거가 확실한 개발로 "엔지니어"가 되야합니다.</p>
 								</section>
 								<section>
 									<span class="icon solid style2 major fa-save"></span>
-									<h3>Ipsum</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+									<h3>기록하기</h3>
+									<p>개발 과정에서 배우게 된 내용들, 이해하게 된 과정, 최신 기술 동향 등 다양한 정보를 기록하고 이해한다면 차후 문제에 대해 신속하게 대응 가능합니다.</p>
 								</section>
 								<section>
 									<span class="icon solid style2 major fa-chart-bar"></span>
-									<h3>Dolor</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+									<h3>데이터 분석</h3>
+									<p>백엔드 개발자에게 데이터를 분석하고 로직을 이해하는것은 매우 중요합니다. 기능 최적화와 유지보수는 개발자가 가져야할 핵심 역량 중 하나입니다.</p>
 								</section>
 								<section>
 									<span class="icon solid style2 major fa-wifi"></span>
-									<h3>Amet</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+									<h3>지식 습득</h3>
+									<p>개발자는 공부를 게을리해선 안됩니다. 기술의 동향을 잘 읽고 그에 맞춘 개발로 성장해가야합니다. 프레임워크, 개발도구 사용법과 결합하면 유연한 개발이 가능합니다.</p>
 								</section>
 								<section>
 									<span class="icon solid style2 major fa-cog"></span>
-									<h3>Magna</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+									<h3>개발 환경</h3>
+									<p>나만의 개발 환경을 구축하는 것은 중요합니다. 하지만 협업에 필요 시 비슷하거나 동일하게 맞춰야합니다. 돌발적인 오류에 대응하기 유용합니다.</p>
 								</section>
 								<section>
 									<span class="icon style2 major fa-paper-plane"></span>
-									<h3>Tempus</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+									<h3>피드백</h3>
+									<p>더 좋은 의견이 제시될 수 있고, 잘못된 부분을 짚어줄 수 있는 훌륭한 수단입니다. 개발자들과의 대화를 통해 문제 해결 기법을 정립하는 것은 반드시 필요합니다.</p>
 								</section>
 								<section>
 									<span class="icon solid style2 major fa-desktop"></span>
-									<h3>Aliquam</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+									<h3>모니터링</h3>
+									<p>애플리케이션에 대한 피드백을 모니터링하고 즉각 반영해야 합니다. 프론트엔드 개발자에게 있어 화면의 동작, 오류 등 다양한 문제는 주기적으로 테스팅 해야합니다.</p>
 								</section>
 								<section>
 									<span class="icon solid style2 major fa-sync-alt"></span>
-									<h3>Elit</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+									<h3>재사용성</h3>
+									<p>개발에 있어 재사용성이 높고 잘 정립된 코드, 패키지가 있다면 정말 좋습니다. 하지만 의존성이 높거나 대체 불가능한 코드라면, 그 역시 새로 구현해야할 과제입니다.</p>
 								</section>
 								<section>
 									<span class="icon solid style2 major fa-hashtag"></span>
-									<h3>Morbi</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-								<section>
-									<span class="icon solid style2 major fa-bolt"></span>
-									<h3>Turpis</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-								<section>
-									<span class="icon solid style2 major fa-envelope"></span>
-									<h3>Ultrices</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-								<section>
-									<span class="icon solid style2 major fa-leaf"></span>
-									<h3>Risus</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+									<h3>주석</h3>
+									<p>코드 리뷰는 어렵습니다. 개개인의 코딩 스타일이 다르고 방식도 다양하기 때문에 이를 간소화하려면 주석의 역할이 매우 중요하다 생각합니다.</p>
 								</section>
 							</div>
 						</div>
 					</section>
-
-				<!-- Seven -->
-					<section class="wrapper style1 align-center">
-						<div class="inner medium">
-							<h2>Get in touch</h2>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field half">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" value="" />
-									</div>
-									<div class="field half">
-										<label for="email">Email</label>
-										<input type="email" name="email" id="email" value="" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="6"></textarea>
-									</div>
-								</div>
-								<ul class="actions special">
-									<li><input type="submit" name="submit" id="submit" value="Send Message" /></li>
-								</ul>
-							</form>
-						</div>
-					</section>
-					
 					
 					<section class="wrapper style1 align-center">
 						<h2>Play Piano</h2>

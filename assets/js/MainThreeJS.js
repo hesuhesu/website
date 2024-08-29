@@ -46,8 +46,19 @@ const loader = new GLTFLoader();
 loader.setDRACOLoader(dracoLoader); // GLTFLoader에 DRACOLoader 설정
 
 const mixers = [];
+const gltfFiles = [
+  'images/model1.gltf',
+  'images/model2.gltf',
+  'images/model3.gltf',
+  'images/model4.gltf',
+  'images/model5.gltf',
+  'images/model6.gltf',
+  'images/model7.gltf',
+];
+
+const randomFile = gltfFiles[Math.floor(Math.random() * gltfFiles.length)];
 // GLTF 파일 로드
-loader.load('images/gltf.gltf', (gltf) => {
+loader.load(randomFile, (gltf) => {
     scene.add(gltf.scene);
     // 애니메이션 믹서 생성
     const mixer = new THREE.AnimationMixer(gltf.scene);

@@ -106,7 +106,6 @@ function addModelToList(name, model) {
       models.splice(index, 1); // 배열에서 모델 제거
     }
   });
-  
   modelEntry.appendChild(removeButton);
   modelListDiv.appendChild(modelEntry);
 }
