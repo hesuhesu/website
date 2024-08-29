@@ -10,93 +10,26 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/content.css" />
 		<link rel="stylesheet" href="assets/css/piano.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tone/15.0.4/Tone.js"></script>
 		<script src="assets/js/piano.js" defer></script>
-		<style>
-			#MainThreeD {
-				width: 100%; /* 또는 원하는 고정 크기 */
-				height: 100%; /* 또는 원하는 고정 크기 */
-				position: absolute;
-				border: 1px solid #eeeeee; /* 경계선 추가 */
-			}
-			h1 {
-				font-size: 5rem;
-				font-weight: 900;
-				color: #fff;
-				text-shadow: 0 1px 0 #000, 
-					0 2px 0 #000,
-					0 3px 0 #000, 
-					0 4px 0 #000, 
-					0 5px 0 #000,
-					0 6px 1px rgba(0,0,0,.5), 
-					0 0 5px rgba(0,0,0,.5),
-					0 1px 3px rgba(0,0,0,.5), 
-					0 3px 5px rgba(0,0,0,.4), 
-					0 5px 10px rgba(0,0,0,.3), 
-					0 10px 10px rgba(0,0,0,.2),
-					0 20px 20px rgba(0,0,0,.15);
-			}
-			h2 {
-				font-size: 3em;
-				font-weight: 900;
-				color: #fff;
-				text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9,
-				0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa,
-				0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1),
-				0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 
-				0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2),
-					0 20px 20px rgba(0,0,0,.15);
-			}
-
-			h2:hover {
-				animation: blink 2s infinite;
-			}
-			@keyframes blink {
-			0%, 100% {
-				text-shadow: 
-					0 1px 0 #ccc, 
-					0 2px 0 #c9c9c9,
-					0 3px 0 #bbb, 
-					0 4px 0 #b9b9b9, 
-					0 5px 0 #aaa,
-					0 6px 1px rgba(0,0,0,.1), 
-					0 0 5px rgba(0,0,0,.1),
-					0 1px 3px rgba(0,0,0,.3), 
-					0 3px 5px rgba(0,0,0,.2), 
-					0 5px 10px rgba(0,0,0,.25), 
-					0 10px 10px rgba(0,0,0,.2),
-					0 20px 20px rgba(0,0,0,.15);
-			}
-			50% {
-				text-shadow: 
-					0 1px 0 #000, 
-					0 2px 0 #000,
-					0 3px 0 #000, 
-					0 4px 0 #000, 
-					0 5px 0 #000,
-					0 6px 1px rgba(0,0,0,.5), 
-					0 0 5px rgba(0,0,0,.5),
-					0 1px 3px rgba(0,0,0,.5), 
-					0 3px 5px rgba(0,0,0,.4), 
-					0 5px 10px rgba(0,0,0,.3), 
-					0 10px 10px rgba(0,0,0,.2),
-					0 20px 20px rgba(0,0,0,.15);
-			}
-		}
-		</style>
 	</head>
 	<body class="is-preload">
-		
 		<!-- Wrapper -->
 			<div id="wrapper" class="divided">
 				<!-- One -->
 					<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
 						<div class="content">
-							<h1>Introduce</h1>
-							<p class="major">이 름 : 은 희 수</p>
-							<p class="major"># 풀스택 개발자 <br># 성실한 개발자</p>
+							<h1>Introduce</h1><br>
+							<p id="intro">이 름 : 은 희 수</p>
+							<p class="major"><element id="intro">기술 스택</element><br>Language : Java, Python, C++, Javascript
+								<br>Library : React, ThreeJS, jquery
+								<br>Framework : Nodejs, Express, Django, SpringBoot, FastAPI
+								<br>Database : MongoDB, MySQL
+							</p>
+							<p class="major"># 풀스택 개발자 <br># 노력과 집념의 결정체</p>
 							<p class="major">Template Design By : <a href="https://html5up.net" target = "blank">HTML5 UP</a>
 								<br>Portfolio Owner : <a href="https://github.com/hesuhesu" target = "blank">Github</a>
 							</p>
@@ -282,7 +215,7 @@
 				<!-- Six -->
 					<section class="wrapper style1 align-center">
 						<div class="inner">
-							<h2>지원자가 생각하는 개발이란?</h2>
+							<h2>개발자 가치관</h2>
 							<div class="items style1 medium onscroll-fade-in">
 								<section>
 									<span class="icon style2 major fa-gem"></span>
@@ -327,7 +260,7 @@
 								<section>
 									<span class="icon solid style2 major fa-hashtag"></span>
 									<h3>주석</h3>
-									<p>코드 리뷰는 어렵습니다. 개개인의 코딩 스타일이 다르고 방식도 다양하기 때문에 이를 간소화하려면 주석의 역할이 매우 중요하다 생각합니다.</p>
+									<p>코드 리뷰는 어렵습니다. 개개인의 코딩 스타일이 다르고 방식도 다양하기 때문에 핵심적인 요소와 흐름을 파악하는 주석의 역할이 매우 중요하다 생각합니다.</p>
 								</section>
 							</div>
 						</div>
