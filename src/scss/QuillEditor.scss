@@ -1,0 +1,102 @@
+
+/*본인이 설정하고 싶은 폰트 import하기*/
+@import url("https://webfontworld.github.io/amore/AritaBuri.css");
+
+@font-face {
+  font-family: "GangwonEduHyeonokT_OTFMediumA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduHyeonokT_OTFMediumA.woff")
+    format("woff");
+}
+/*폰트 설정예시*/
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="buri"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="buri"]::before {
+  content: "Buri";
+  font-family: "AritaBuri";
+}
+.ql-font-buri {
+  font-family: "AritaBuri";
+}
+
+#toolbar {
+  background-color: #c4c4c4;
+}
+
+@font-face { 
+  font-family: "할아버지의나눔";
+  src: url("../../public/할아버지의나눔.ttf") format("truetype");
+} 
+.ql-font-할아버지의나눔 {
+  font-family: "할아버지의나눔";
+}
+
+@font-face { 
+  font-family: "끄트머리체";
+  src: url("../../public/끄트머리체.ttf") format("truetype");
+}
+.ql-font-끄트머리체 {
+  font-family: "끄트머리체";
+}
+
+@font-face { 
+  font-family: "나눔고딕";
+  src: url("../../public/NanumGothic.ttf") format("truetype");
+}
+.ql-font-나눔고딕 {
+  font-family: "나눔고딕";
+}
+
+@font-face { 
+  font-family: "궁서체";
+  src: url("../../public/ChosunGs.TTF") format("truetype");
+}
+.ql-font-궁서체 {
+  font-family: "궁서체";
+}
+
+@font-face { 
+  font-family: "굴림체";
+  src: url("../../public/ChosunGu.TTF") format("truetype");
+}
+.ql-font-굴림체 {
+  font-family: "굴림체";
+}
+
+@font-face { 
+  font-family: "바탕체";
+  src: url("../../public/HCRBatang.ttf") format("truetype");
+}
+.ql-font-바탕체 {
+  font-family: "바탕체";
+}
+
+@font-face { 
+  font-family: "돋움체";
+  src: url("../../public/HCRDotum.ttf") format("truetype");
+}
+.ql-font-돋움체 {
+  font-family: "돋움체";
+}
+
+@font-face { 
+  font-family: "Quill";
+  src: url("../../public/Quill.ttf") format("truetype");
+}
+
+.ql-font-Quill {
+  font-family: "Quill";
+}
+
+/* 에디터 양식 */
+.ql-editor{ 
+  min-height: 500px !important;
+  width: 100%;
+  overflow: hidden;
+}
+
+.quill-title {
+  background-color: #c4c4c4;
+  border: none;
+  padding: 12px 0 12px 5px;
+  margin: 8px 0 8px 0;
+  width: 100%; /* 캔버스의 최대 너비를 100%로 설정 */
+}
