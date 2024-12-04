@@ -45,26 +45,26 @@ const Project: React.FC = () => {
           title: "My Diary",
           description: "나의 일기 앱을 Kotlin 을 사용하여 만든 toy 프로젝트 입니다.",
           link: "https://github.com/hesuhesu/MyDiary",
-          picture: ["MyDiary.png", "MyDiary2.png", "MyDiary3.png", "MyDiary4.png", "MyDiary5.png"],
+          picture: ["MyDiary.webp", "MyDiary2.webp", "MyDiary3.webp", "MyDiary4.webp", "MyDiary5.webp"],
         },
         {
           title: "완성도 높은 WYSIWYG Editor 구축",
           description: "Javascript-Based 문서 편집 기능과 ThreeJS 를 활용한 GLTF Editor 를 결합한 졸업 과제 프로젝트입니다.",
           link: "https://github.com/hesuhesu/SW_Project",
-          picture: ["WYSIWYG_Editor.png", "WYSIWYG_Editor2.png"],
+          picture: ["WYSIWYG_Editor.webp", "WYSIWYG_Editor2.webp"],
         },
         {
           title: "GLTF 3D Editor",
           description: "3D Editor 기능을 보강하여 코드 리팩토링 및 클라이언트 배포를 진행한 토이 프로젝트 입니다.",
           link: "https://github.com/hesuhesu/gltfeditor",
           secondLink: "https://gltfeditor.o-r.kr",
-          picture: ["3D_Editor.png", "3D_Editor2.png"],
+          picture: ["3D_Editor.webp", "3D_Editor2.webp"],
         },
         {
           title: "나만의 블로그 만들기",
           description: "포트폴리오 겸 직접 블로그를 제작하였습니다.",
           link: "https://github.com/hesuhesu/ReactUITester",
-          picture: ["MyBlog.png", "MyBlog2.png"],
+          picture: ["MyBlog.webp", "MyBlog2.webp"],
         },
       ].map((project, index) => (
         <ProjectDiv

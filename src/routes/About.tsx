@@ -6,7 +6,7 @@ const About: React.FC = () => {
     return (
         <AboutContainer>
             <IntroduceContainer>
-                <img src="profile.jpeg" alt="Description" />
+                <img src="profile.webp" alt="Description" />
                 <h2>은희수</h2>
                 <DescriptionContainer>
                     <dt>생년월일</dt>
